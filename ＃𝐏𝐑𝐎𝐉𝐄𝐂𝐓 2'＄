@@ -1,0 +1,12 @@
+Pesquise por "DelayedWorkTracker" e apague o delayed, caso não ache nenhum resultado procure por "WorkTracker"
+embaixo dessa string haverá um invoke-static clice na parte azul e selecione e clique em "goto"
+apague esse method e para o fechar deixe assim 
+   
+   .register 2
+   
+   const/4 v0, 0x0
+   
+   return-object v0
+ .end method 
+   
+ Método Ant Atraso e Rajada
