@@ -1,0 +1,14 @@
+Pesquise por "decoded" vai ter bastante resultados o que você deverá entrar é o que o nome da classe seja "c" entre no primeiro e vai um pouco para baixo
+vai ter um "0x1" deixe ele como "0x0" volte para cima onde tem a string embaixo vai ter um invoke-virtual clique na parte azul e clique em goto
+você sera redirecionado pra uma subclasse apague o .method deixando o assim
+
+   .registers 2
+   
+   const/4 v0, 0x0
+   
+   return-object v0
+.end method
+
+deixe o .method debaixo assim também saia e volte e clique no decoded debaixo do que você clicou e descendo um pouco tera um 0x1 deixe 0x0
+
+Método Aprimorado de rajada e ant atraso e tankar
