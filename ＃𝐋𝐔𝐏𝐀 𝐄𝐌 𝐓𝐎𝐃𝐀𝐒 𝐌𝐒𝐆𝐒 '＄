@@ -1,1 +1,12 @@
-Entre no seu zap pesquise por "text_left" entra vai lá embaixo terá um walmage view pegue o id dentro dele e vá em dex e pesquise por integer entre no primeiro resultado
+Entre no seu zap pesquise por "text_left" entra vai lá embaixão terá um "<WalmageView" pegue o ID dentro dele e
+vá em dex e pesquise por Integer entre no primeiro resultado em cima terá um "invoke-virtual"
+clique no "A0A()Z" e clique em goto 
+   
+   E o apague deixando assim:
+
+   .registers 2
+      
+    Const v0, 0x1
+
+   Return v0
+.end method
