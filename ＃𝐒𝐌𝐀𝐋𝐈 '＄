@@ -1,0 +1,52 @@
+• Tipos de const e pra que serve 
+
+1 - "const-string" ele serve pra definir uma String na dex 
+
+2 - "const/4" serve pra definir um valor de um 0x o valor máximo desse const e de 0x7 
+
+3 - "const/16" outro const comun pra definir o valor do 0x o valor máximo do 0x é de 9999 
+
+4 - "const/high16" outro const comun o valor máximo é de 0x99999999 
+
+5 - "const-wide" outro tipo de const porém ele usado para valores quebrados e com letras exemplo "const-wide v0, 0x7d0" 
+
+6 - "const v0," ele é usado geralmente pra encerrar um method nao void mas tbm pra definir um valor de 0x não necessariamente toda as vezes é um v0 pode ser v1 ou v2 assim vai 
+ 
+• Tipos de Invokes e Suas funções 
+
+1 - O mais simples dos invokes é o "invoke-static" usado so pra invokar um method e pronto geralmente usado pra fazer botão por isso que vocês colocam o method na shp e quando você coloca o invoke do botão ele vai procurar aquele method e fazer o botão funcionar 
+
+2 - "invoke-virtual" o invoke-virtual é um pouco difícil de entender é o seguinte ele invoka uma coisa que não está no apk e sim na linguagem é só isso meio difícil de entender mas é 
+
+3 - "invoke-direct" ele invoka uma outra classe geralmente são chamadas de sub-classss que são classes bem pequenas que estão lá pra completar o código então quando ele é utilizado é pra ele pegar aquela classe que está no LX 
+
+4 - "invoke-interface" usado pra invokar uma interface acho que é isso não sei muito ao certo porem a gente não usa muito ele 
+
+5 - "invoke-super" ele já é mais complicado nos modder não usamos eles em quase nenhuma ocasião ele tem funções parecidas com o "invoke-direct" e o virtual
+
+• If, Cond e goto 
+
+If significa "se" traduzido para o português geralmente o if é acompanhado por um :cond que significa "condição" ou seja "se existir a condição" ele faz tal coisa sem essa condição ele só continua o codigo é basicamente isso o if e o cond sao irmãos entende, muito poucas vezes nós usamos um if ou um cond agora vem os "goto" significa "ir para"  o goto funciona assim exemplo ":goto_2p" os dois pontos fazem parte do código e um pouco pra baixo vai ter um "goto :goto_2p" ele vai pular esse código e  ir para onde o "goto" está só isso msm
+• Iget-Object e Move-Result 
+
+Os "iget-object" como o próprio nome já diz "pegar objeto" geralmente é usado pra pegar o valor de um field os fields ficam no começo da classe e eles armazenam alguma coisa então quando o "iget-object" é usado é para pegar o valor do field
+O "move-result" ele é usado para mudar o resultado de algo por exemplo o de um invoke quando você quer mudar o resultado de um invoke é usado um "invoke-static" com o resto do código e a informação que vc quer mudar e o move result-object pra mudar o resultado do invoke embaixo do outro meio complicado mas é isso
+
+• Returns e como apagar um method da maneira certa e os Registers 
+
+Antes de tudo existem três tipos de return são eles: 
+
+1 - o return-void usado quando um method é void mas como saber se um método é void ou não então sempre que você quer fazer um método de apagar o .method inteiro você tem que ver se no final .method tem um V exemplo ".method public constructor <init>(LX/00G;)V" tá vendo esse V dps o parênteses então se tiver isso no method é pq ele é void caso não tenha como vou apagar ele sendo que não posso usar "return-void" vou explicar e também falar do outro tipo de return 
+
+2 - o return-object 
+
+Quando o .method não tem o V no final é pq ele não é void então para você poder apagar ele você tera que pular uma linha do .register e colocar o seguinte "const v0, 0x0" 
+
+E depois apagar o conteúdo do method sem apagar o ".end method", e caso nem tenha o "return-object" que está está cima dele  você escreverá escreverá e colocará assim "return-object v0" 
+
+Em cima do ".end method" após isso você terá conseguido apagar um method sem usar o return-void de maneira certa 
+
+3 - o return-wide usado pra método que nem tem V no final e nem nada e sim tem a letra J exemplo ".method public A03()J" quando ele tiver a letra J o return que você usará é o "return-wide v0" e você tem que fazer a mesma coisa do const v0, 0x0 
+
+4 - o register é o valor de registradores do .method para denominar o número do register é feito dessa forma eles contam o quanto v1 v2 v3 ou v0 tem no method se tiver um v1 e v2 o method vai ter dois register mas caso ele tenha um v1 e outro v1 ele vai ter um só porque o valor do v não mudou
+Se fosse valores diferentes aí sim seria um .register 2 porém é um .register 1 se nao os register ião ter valores gigantes por causa da quantidades de v0, v1, v2, v3 e etc
