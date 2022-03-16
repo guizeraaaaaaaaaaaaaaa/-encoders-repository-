@@ -1,0 +1,8 @@
+Pesquise por "Warning: processing time >" 
+em cima terá um "0x1 deixe "0x0" embaixo deixe o "1 ms" como "0 ms" 
+desça um pouco para abaixo
+E terá um "0x2" deixe 0x0 também clique nos 3 pontos e pesquise por
+"Error: zero orig time -- cannot compute delay"
+Em cima terá um "iget-wide" certifique que ele tenha um A04 ou qualquer outro número
+Clique nele e clique em goto você irá para uma subclasse
+Deixe o "0x0" dentro dela como "0x1"
